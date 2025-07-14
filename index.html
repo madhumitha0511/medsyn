@@ -232,8 +232,19 @@ nav a.active {
     observer.observe(section);
   });
 </script>
+ <header>
+    <div class="logo">MEDSYN</div>
+    <nav>
+      <a href="{{ url_for('home') }}">About</a>
+      <a href="{{ url_for('products') }}">Products</a>
+      <a href="{{ url_for('technologies') }}">Technologies</a>
 
-   <div href="header.html"></div>
+      <a href="#diagnostics">AI Diagnostics</a>
+      <a href="{{ url_for('why') }}">Why Choose Us</a>
+      <a href="#team">Key People</a>
+      <a href="#investors">Investor Relations</a>
+    </nav>
+  </header>
   <!-- Hero Section -->
   <section class="hero">
     <div class="bubble bubble1"></div>
@@ -248,8 +259,108 @@ nav a.active {
   <a href="#about"><i class="fas fa-chevron-down"></i></a>
 </div>
   </section>
-{% include 'about.html' %}
-{% include 'footer.html' %}
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="about-header">
+    <h2>About <span class="highlight">Us</span></h2>
+    <p>Pioneering the future of ophthalmology through innovation and excellence</p>
+  </div>
+
+  <div class="about-grid">
+    <!-- Left Card -->
+    <div class="about-card">
+      <h3>Our Mission</h3>
+      <p>To revolutionize ophthalmology through cutting-edge technology, making advanced eye care accessible to all and preventing vision loss worldwide.</p>
+      <div class="about-stats">
+        <div><strong>500+</strong><br>Clinics Worldwide</div>
+        <div><strong>1.2M+</strong><br>Patients Helped</div>
+        <div><strong>40+</strong><br>Patents Filed</div>
+        <div><strong>28</strong><br>Countries</div>
+      </div>
+      <div class="about-icons">
+        <i class="fas fa-shield-check"></i> FDA Approved
+        <i class="fas fa-certificate"></i> CE Certified
+        <i class="fas fa-user-shield"></i> HIPAA Compliant
+        <i class="fas fa-clipboard-check"></i> ISO 13485
+      </div>
+    </div>
+
+    <!-- Right Story -->
+    <div class="about-story">
+      <h3>Our Story</h3>
+      <p>
+        Founded in 2018 by a team of ophthalmologists and AI researchers, Medsyn was born from a vision to transform eye care through technology.
+        Our breakthrough came in 2020 with the development of our proprietary AI architecture for ophthalmic diagnosis.
+      </p>
+      <p>
+        Today, Medsyn technologies are deployed in over 500 clinics across 28 countries. We continue to push the boundaries of what's possible in eye care, driven by our mission to preserve and restore vision for millions worldwide.
+      </p>
+      <div class="pillars">
+        <div class="pillar"><i class="fas fa-flask"></i> Innovation</div>
+        <div class="pillar"><i class="fas fa-microscope"></i> Precision</div>
+        <div class="pillar"><i class="fas fa-users"></i> Collaboration</div>
+        <div class="pillar"><i class="fas fa-heartbeat"></i> Patient-Centric</div>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">MEDSYN<span class="accent"> Therapeutics</span></div>
+                <p class="footer-desc">
+                    Advancing ophthalmology through innovation, research, and collaboration.
+                </p>
+                <div class="footer-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">About</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                    <li><a href="{{ url_for('technologies') }}">Technologies</a></li>
+                    <li><a href="#rnd">R&D</a></li>
+                    <li><a href="{{ url_for('why') }}">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Clinical Trials</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest updates on research and products.</p>
+                <form>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Medsyn Therapeutics. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
