@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medsyn Therapeutics-Technologies</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+
+<style>body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0A0F1C, #0E1624);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 36px;
+    background-color: rgba(10, 15, 28, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: #00FFAD;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  nav a {
+    margin: 0 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #00FFAD;
+  }
+  
+  .tech-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+  }
+  .tech-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  .tech-hero h1 span {
+    color: #00FFAD;
+  }
+  .tech-hero p {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Technology Cards */
+  .tech-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px 80px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .tech-card {
+    background-color: #101e33;
+    border-radius: 12px;
+    padding: 28px 24px;
+    max-width: 350px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 12px rgba(0, 255, 173, 0.05);
+    transition: transform 0.3s ease;
+  }
+  .tech-card:hover {
+    transform: translateY(-6px);
+  }
+  .tech-icon {
+    font-size: 2.2rem;
+    color: #00FFAD;
+    margin-bottom: 12px;
+  }
+  .tech-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #00FFAD;
+  }
+  .tech-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .tech-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  .tech-card ul li {
+    font-size: 0.95rem;
+    margin: 6px 0;
+    color: #00c0a4;
+  }
+  .tech-card a {
+    color: #00FFAD;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .tech-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .tech-hero h1 {
+      font-size: 2rem;
+    }
+    .tech-hero p {
+      font-size: 1rem;
+    }
+    .tech-cards {
+      padding: 20px 10px 60px;
+    }
+  }
+   </style>    
+</head>
+<body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, options);
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medsyn Therapeutics</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/medsyn/index.css">
+  
+</head>
+<body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, options);
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+  <!-- Header -->
+    <!-- Header -->
+  <header>
+    <div class="logo">MEDSYN</div>
+    <nav>
+      <a href="{{ url_for('home') }}">About</a>
+      <a href="{{ url_for('products') }}">Products</a>
+      <a href="{{ url_for('technologies') }}">Technologies</a>
+
+      <a href="#diagnostics">AI Diagnostics</a>
+      <a href="{{ url_for('why') }}">Why Choose Us</a>
+      <a href="#team">Key People</a>
+      <a href="#investors">Investor Relations</a>
+    </nav>
+  </header>
+</body>
+
+</html>
+
+
+  <section class="tech-hero">
+    <h1>Our <span>Technologies</span></h1>
+    <p>Leveraging cutting-edge science and technology to develop innovative solutions for ophthalmology challenges.</p>
+  </section>
+
+  <section class="tech-cards">
+    <!-- Card 1 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-eye"></i></div>
+      <h3>AI Retinal Imaging</h3>
+      <p>Advanced deep learning algorithms that detect subtle retinal changes, enabling early diagnosis of conditions like diabetic retinopathy and AMD.</p>
+      <ul>
+        <li>Early disease detection</li>
+        <li>Automated screening</li>
+        <li>Disease progression tracking</li>
+      </ul>
+  
+    </div>
+
+    <!-- Card 2 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-vial"></i></div>
+      <h3>Molecular Therapeutics</h3>
+      <p>Targeted molecular compounds addressing the root causes of ocular diseases with fewer side effects.</p>
+      <ul>
+        <li>Targeted drug delivery</li>
+        <li>Reduced systemic exposure</li>
+        <li>Extended release formulations</li>
+      </ul>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-dna"></i></div>
+      <h3>Biomarker Analytics</h3>
+      <p>Measuring specific biomarkers in ocular fluids for personalized treatment and therapeutic monitoring.</p>
+      <ul>
+        <li>Personalized medicine</li>
+        <li>Treatment response prediction</li>
+        <li>Minimally invasive diagnostics</li>
+      </ul>
+   
+    </div>
+  </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medsyn Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0A0F1C;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .footer {
+            background-color: #0A0F1C;
+            color: #fff; /* Changed to pure white */
+            padding: 60px 20px 30px;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .footer-logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: white;
+        }
+        .footer-logo .accent {
+            color: #00FFAD;
+        }
+
+        .footer-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #fff; /* Changed to white */
+        }
+
+        .footer-icons a {
+            margin-right: 12px;
+            font-size: 1.1rem;
+            color: #fff; /* Changed to white */
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        .footer-icons a:hover {
+            color: #00FFAD;
+        }
+
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #fff; /* Changed to white */
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .footer-column ul li a:hover {
+            color: #00FFAD;
+        }
+
+        .footer-column p {
+            color: #fff; /* Ensure newsletter description is white */
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer-column form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-column input[type="email"] {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            background-color: #1b2432;
+            color: white;
+        }
+        .footer-column button {
+            padding: 10px;
+            background: linear-gradient(90deg, #7f5af0, #00FFAD);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .footer-column button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #fff; /* Changed to white */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-links a {
+            color: #fff; /* Changed to white */
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .footer-links a:hover {
+            color: #00FFAD;
+        }
+
+        /* ✅ Mobile & Tablet Responsive */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 10px 40px;
+            }
+
+            .footer-column {
+                min-width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">MEDSYN<span class="accent"> Therapeutics</span></div>
+                <p class="footer-desc">
+                    Advancing ophthalmology through innovation, research, and collaboration.
+                </p>
+                <div class="footer-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">About</a></li>
+                    <li><a href="{{ url_for('products') }}">Products</a></li>
+                    <li><a href="{{ url_for('technologies') }}">Technologies</a></li>
+                    <li><a href="#rnd">R&D</a></li>
+                    <li><a href="{{ url_for('why') }}">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Clinical Trials</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest updates on research and products.</p>
+                <form>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Medsyn Therapeutics. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
