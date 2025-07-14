@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Choose Medsyn - Medsyn Therapeutics</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0A0F1C, #0E1624);
+      color: white;
+      overflow-x: hidden;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 36px;
+      background-color: rgba(10, 15, 28, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      color: #00FFAD;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    
+    nav a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00FFAD;
+    }
+    
+    .why-hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    .why-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .why-hero h1 span {
+      color: #00FFAD;
+    }
+    .why-hero p {
+      color: #aaa;
+      margin-top: 10px;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Why Choose Cards */
+    .why-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .why-card {
+      background-color: #101e33;
+      border-radius: 12px;
+      padding: 40px 28px;
+      max-width: 350px;
+      flex: 1 1 300px;
+      box-shadow: 0 0 12px rgba(0, 255, 173, 0.05);
+      transition: transform 0.3s ease;
+      text-align: left;
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+    }
+    
+    .why-icon {
+      font-size: 2.5rem;
+      color: #00FFAD;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .why-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #00FFAD;
+      font-weight: 600;
+    }
+    
+    .why-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    
+    .why-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .why-card ul li {
+      font-size: 0.9rem;
+      margin: 10px 0;
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .why-card ul li::before {
+      content: "✓";
+      color: #00FFAD;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 40px 20px 80px;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(45deg, #00FFAD, #00e5a8);
+      color: #0A0F1C;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 255, 173, 0.3);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #0A0F1C;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #2a2a2a;
+    }
+    
+    footer p {
+      color: #888;
+      margin: 0;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .why-hero h1 {
+        font-size: 2rem;
+      }
+      .why-hero p {
+        font-size: 1rem;
+      }
+      .why-cards {
+        padding: 20px 10px 40px;
+      }
+      .why-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, options);
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medsyn Therapeutics</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/medsyn/index.css">
+  
+</head>
+<body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, options);
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+  <!-- Header -->
+    <!-- Header -->
+ <header>
+  <div class="logo">MEDSYN</div>
+  <nav>
+    <a href="index.html#about">About</a>
+    <a href="products.html">Products</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="index.html#diagnostics">AI Diagnostics</a>
+    <a href="whychooseus.html">Why Choose Us</a>
+    <a href="index.html#team">Key People</a>
+    <a href="index.html#investors">Investor Relations</a>
+  </nav>
+</header>
+
+</body>
+
+</html>
+
+
+  <!-- Hero Section -->
+  <section class="why-hero">
+    <h1>Why Choose <span>Medsyn</span></h1>
+    <p>Leading the future of ophthalmology with innovation, precision, and trust</p>
+  </section>
+
+  <!-- Why Choose Cards -->
+  <section class="why-cards">
+    <div class="why-card">
+      <i class="fas fa-lightbulb why-icon"></i>
+      <h3>Innovation</h3>
+      <p>Pioneering breakthrough technologies that redefine the standards of ophthalmological care and treatment.</p>
+      <ul>
+        <li>Cutting-edge R&D facilities</li>
+        <li>Proprietary AI algorithms</li>
+        <li>Over 40 patents filed</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-crosshairs why-icon"></i>
+      <h3>Precision</h3>
+      <p>Unmatched accuracy in diagnostics and treatment, ensuring optimal outcomes for every patient.</p>
+      <ul>
+        <li>Sub-micron measurement accuracy</li>
+        <li>97% diagnostic accuracy</li>
+        <li>ISO 13485 certified processes</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <i class="fas fa-shield-alt why-icon"></i>
+      <h3>Trust</h3>
+      <p>Building confidence through transparency, reliability, and a commitment to patient well-being.</p>
+      <ul>
+        <li>FDA & CE approved devices</li>
+        <li>HIPAA compliant data handling</li>
+        <li>Used in 500+ clinics worldwide</li>
+      </ul>
+    </div>
+  </section>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medsyn Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0A0F1C;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .footer {
+            background-color: #0A0F1C;
+            color: #fff; /* Changed to pure white */
+            padding: 60px 20px 30px;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .footer-logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: white;
+        }
+        .footer-logo .accent {
+            color: #00FFAD;
+        }
+
+        .footer-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #fff; /* Changed to white */
+        }
+
+        .footer-icons a {
+            margin-right: 12px;
+            font-size: 1.1rem;
+            color: #fff; /* Changed to white */
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        .footer-icons a:hover {
+            color: #00FFAD;
+        }
+
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #fff; /* Changed to white */
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .footer-column ul li a:hover {
+            color: #00FFAD;
+        }
+
+        .footer-column p {
+            color: #fff; /* Ensure newsletter description is white */
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer-column form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-column input[type="email"] {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            background-color: #1b2432;
+            color: white;
+        }
+        .footer-column button {
+            padding: 10px;
+            background: linear-gradient(90deg, #7f5af0, #00FFAD);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .footer-column button:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #fff; /* Changed to white */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-links a {
+            color: #fff; /* Changed to white */
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .footer-links a:hover {
+            color: #00FFAD;
+        }
+
+        /* ✅ Mobile & Tablet Responsive */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 10px 40px;
+            }
+
+            .footer-column {
+                min-width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-logo">MEDSYN<span class="accent"> Therapeutics</span></div>
+      <p class="footer-desc">
+        Advancing ophthalmology through innovation, research, and collaboration.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="index.html#rnd">R&D</a></li>
+        <li><a href="index.html#partners">Partnerships</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Clinical Trials</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Newsletter</h4>
+      <p>Subscribe to our newsletter for the latest updates on research and products.</p>
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Medsyn Therapeutics. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+ 
+</body>
+</html>
