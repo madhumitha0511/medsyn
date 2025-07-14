@@ -233,9 +233,7 @@ nav a.active {
   });
 </script>
 
-<nav>
-  <a href="header.html"></a>
-</nav>
+{% include 'header.html' %}
 
   <!-- Hero Section -->
   <section class="hero">
@@ -251,12 +249,8 @@ nav a.active {
   <a href="#about"><i class="fas fa-chevron-down"></i></a>
 </div>
   </section>
-  
-<nav>
-  <a href="about.html"></a>
-  <a href="footer.html"></a>
-</nav>
-
+{% include 'about.html' %}
+{% include 'footer.html' %}
 
 </body>
 
