@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medsyn Therapeutics-Technologies</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+
+<style>body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0A0F1C, #0E1624);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 36px;
+    background-color: rgba(10, 15, 28, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: #00FFAD;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  nav a {
+    margin: 0 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #00FFAD;
+  }
+  
+  .tech-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+  }
+  .tech-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  .tech-hero h1 span {
+    color: #00FFAD;
+  }
+  .tech-hero p {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Technology Cards */
+  .tech-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px 80px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .tech-card {
+    background-color: #101e33;
+    border-radius: 12px;
+    padding: 28px 24px;
+    max-width: 350px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 12px rgba(0, 255, 173, 0.05);
+    transition: transform 0.3s ease;
+  }
+  .tech-card:hover {
+    transform: translateY(-6px);
+  }
+  .tech-icon {
+    font-size: 2.2rem;
+    color: #00FFAD;
+    margin-bottom: 12px;
+  }
+  .tech-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #00FFAD;
+  }
+  .tech-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .tech-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  .tech-card ul li {
+    font-size: 0.95rem;
+    margin: 6px 0;
+    color: #00c0a4;
+  }
+  .tech-card a {
+    color: #00FFAD;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .tech-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .tech-hero h1 {
+      font-size: 2rem;
+    }
+    .tech-hero p {
+      font-size: 1rem;
+    }
+    .tech-cards {
+      padding: 20px 10px 60px;
+    }
+  }
+   </style>    
+</head>
+<body>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, options);
+
+  reveals.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+{% include 'header.html' %}
+
+  <section class="tech-hero">
+    <h1>Our <span>Technologies</span></h1>
+    <p>Leveraging cutting-edge science and technology to develop innovative solutions for ophthalmology challenges.</p>
+  </section>
+
+  <section class="tech-cards">
+    <!-- Card 1 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-eye"></i></div>
+      <h3>AI Retinal Imaging</h3>
+      <p>Advanced deep learning algorithms that detect subtle retinal changes, enabling early diagnosis of conditions like diabetic retinopathy and AMD.</p>
+      <ul>
+        <li>Early disease detection</li>
+        <li>Automated screening</li>
+        <li>Disease progression tracking</li>
+      </ul>
+  
+    </div>
+
+    <!-- Card 2 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-vial"></i></div>
+      <h3>Molecular Therapeutics</h3>
+      <p>Targeted molecular compounds addressing the root causes of ocular diseases with fewer side effects.</p>
+      <ul>
+        <li>Targeted drug delivery</li>
+        <li>Reduced systemic exposure</li>
+        <li>Extended release formulations</li>
+      </ul>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="tech-card">
+      <div class="tech-icon"><i class="fas fa-dna"></i></div>
+      <h3>Biomarker Analytics</h3>
+      <p>Measuring specific biomarkers in ocular fluids for personalized treatment and therapeutic monitoring.</p>
+      <ul>
+        <li>Personalized medicine</li>
+        <li>Treatment response prediction</li>
+        <li>Minimally invasive diagnostics</li>
+      </ul>
+   
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</body>
+</html>

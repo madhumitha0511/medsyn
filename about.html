@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medsyn Therapeutics</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+<style>
+  /* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section Wrapper */
+.about-section {
+  background-color: #0E1624;
+  color: #ddd;
+  padding: 60px 20px 80px;
+  scroll-margin-top: 60px;
+  margin-top: -1px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header Content */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+.about-header h2 {
+  font-size: 2.4rem;
+  color: white;
+}
+.about-header .highlight {
+  color: #00FFAD;
+}
+.about-header p {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: #aaa;
+}
+
+/* Main Grid Layout */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 32px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Card Styles */
+.about-card,
+.about-story {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+  background: #101e33;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 0 20px rgba(0, 255, 173, 0.05);
+  box-sizing: border-box;
+}
+
+/* Titles & Text */
+.about-card h3,
+.about-story h3 {
+  color: #00FFAD;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+.about-card p,
+.about-story p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+/* Stats Section */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+  color: #00FFAD;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Certifications */
+.about-icons {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: #888;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Pillar Boxes */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+.pillar {
+  background: #0A1524;
+  padding: 14px 16px;
+  border-radius: 8px;
+  text-align: center;
+  color: #00FFAD;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+.pillar:hover {
+  background: #101f34;
+}
+
+/* ✅ Responsive Typography */
+@media (max-width: 768px) {
+  .about-header h2 {
+    font-size: 2rem;
+  }
+  .about-header p {
+    font-size: 1rem;
+  }
+  .about-card h3,
+  .about-story h3 {
+    font-size: 1.3rem;
+  }
+  .about-card p,
+  .about-story p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Smaller Mobile Fix */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 15px 60px;
+  }
+  .about-header h2 {
+    font-size: 1.8rem;
+  }
+  .about-header p {
+    font-size: 0.95rem;
+  }
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}
+ </style>
+</head>
+<body>
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="about-header">
+    <h2>About <span class="highlight">Us</span></h2>
+    <p>Pioneering the future of ophthalmology through innovation and excellence</p>
+  </div>
+
+  <div class="about-grid">
+    <!-- Left Card -->
+    <div class="about-card">
+      <h3>Our Mission</h3>
+      <p>To revolutionize ophthalmology through cutting-edge technology, making advanced eye care accessible to all and preventing vision loss worldwide.</p>
+      <div class="about-stats">
+        <div><strong>500+</strong><br>Clinics Worldwide</div>
+        <div><strong>1.2M+</strong><br>Patients Helped</div>
+        <div><strong>40+</strong><br>Patents Filed</div>
+        <div><strong>28</strong><br>Countries</div>
+      </div>
+      <div class="about-icons">
+        <i class="fas fa-shield-check"></i> FDA Approved
+        <i class="fas fa-certificate"></i> CE Certified
+        <i class="fas fa-user-shield"></i> HIPAA Compliant
+        <i class="fas fa-clipboard-check"></i> ISO 13485
+      </div>
+    </div>
+
+    <!-- Right Story -->
+    <div class="about-story">
+      <h3>Our Story</h3>
+      <p>
+        Founded in 2018 by a team of ophthalmologists and AI researchers, Medsyn was born from a vision to transform eye care through technology.
+        Our breakthrough came in 2020 with the development of our proprietary AI architecture for ophthalmic diagnosis.
+      </p>
+      <p>
+        Today, Medsyn technologies are deployed in over 500 clinics across 28 countries. We continue to push the boundaries of what's possible in eye care, driven by our mission to preserve and restore vision for millions worldwide.
+      </p>
+      <div class="pillars">
+        <div class="pillar"><i class="fas fa-flask"></i> Innovation</div>
+        <div class="pillar"><i class="fas fa-microscope"></i> Precision</div>
+        <div class="pillar"><i class="fas fa-users"></i> Collaboration</div>
+        <div class="pillar"><i class="fas fa-heartbeat"></i> Patient-Centric</div>
+      </div>
+    </div>
+  </div>
+</section>
