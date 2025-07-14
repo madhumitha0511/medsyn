@@ -1,840 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Medsyn Therapeutics</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-    /* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0A0F1C;
-    color: #fff;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-  
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 80px 20px 40px;
-    background: linear-gradient(135deg, #0A0F1C 0%, #1a2332 100%);
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #fff 0%, #00FFAD 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
-      
-    margin-top: 10px;
-    font-size: 1.1rem;
-   
-}
-
-.hero-line {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #00FFAD, #7f5af0);
-    margin: 0 auto;
-}
-
-/* Products Section */
-.products-section {
-    padding: 80px 20px;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.product-card {
-    background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
-    border-radius: 15px;
-    padding: 40px 30px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 173, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.product-card:hover::before {
-    left: 100%;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    border-color: #00FFAD;
-    box-shadow: 0 20px 40px rgba(0, 255, 173, 0.2);
-}
-
-.product-icon {
-    font-size: 3rem;
-    color: #00FFAD;
-    margin-bottom: 25px;
-}
-
-.product-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.product-card p {
-    color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.product-status {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.fda-approved {
-    background-color: rgba(0, 255, 173, 0.2);
-    color: #00FFAD;
-    border: 1px solid #00FFAD;
-}
-
-.phase-trial {
-    background-color: rgba(127, 90, 240, 0.2);
-    color: #7f5af0;
-    border: 1px solid #7f5af0;
-}
-
-.ce-marked {
-    background-color: rgba(255, 193, 7, 0.2);
-    color: #ffc107;
-    border: 1px solid #ffc107;
-}
-
-.product-link {
-    color: #00FFAD;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-.product-link:hover {
-    transform: translateX(5px);
-}
-
-.product-link i {
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-}
-
-.product-link:hover i {
-    transform: translateX(3px);
-}
-
-/* Pipeline Section */
-.pipeline-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1a2332 0%, #0A0F1C 100%);
-}
-
-.pipeline-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.pipeline-section > .container > p {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 50px;
-}
-
-.pipeline-timeline {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.pipeline-item {
-    flex: 1;
-    min-width: 180px;
-    text-align: center;
-    padding: 30px 20px;
-    background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.pipeline-item:hover {
-    transform: translateY(-5px);
-    border-color: #00FFAD;
-    box-shadow: 0 10px 30px rgba(0, 255, 173, 0.2);
-}
-
-.pipeline-phase {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #00FFAD;
-    margin-bottom: 10px;
-}
-
-.pipeline-count {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.pipeline-description {
-    font-size: 0.9rem;
-    color: #ccc;
-    line-height: 1.4;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #0A0F1C;
-    color: #fff;
-    padding: 60px 20px 30px;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 240px;
-}
-
-.footer-logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: white;
-}
-
-.footer-logo .accent {
-    color: #00FFAD;
-}
-
-.footer-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #fff;
-}
-
-.footer-icons a {
-    margin-right: 12px;
-    font-size: 1.1rem;
-    color: #fff;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-.footer-icons a:hover {
-    color: #00FFAD;
-}
-
-.footer-column h4 {
-    color: white;
-    margin-bottom: 16px;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-.footer-column ul li a:hover {
-    color: #00FFAD;
-}
-
-.footer-column p {
-    color: #fff;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.footer-column form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-column input[type="email"] {
-    padding: 10px 14px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    background-color: #1b2432;
-    color: white;
-}
-
-.footer-column button {
-    padding: 10px;
-    background: linear-gradient(90deg, #7f5af0, #00FFAD);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.footer-column button:hover {
-    opacity: 0.9;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    font-size: 0.85rem;
-    color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-.footer-links a:hover {
-    color: #00FFAD;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Medsyn Therapeutics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0A0F1C, #0E1624);
+      color: white;
+      overflow-x: hidden;
+    }
     header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 36px;
+      background-color: rgba(10, 15, 28, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+    }
+    .logo {
+      font-size: 1.8rem;
+      color: #00FFAD;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    nav a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #00FFAD;
     }
 
-    nav {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 60px 0 20px;
+    }
+    .section-title span {
+      color: #00FFAD;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .pipeline-timeline {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .pipeline-item {
-        min-width: 100%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-        padding: 0 10px 40px;
-    }
-
-    .footer-column {
-        min-width: 100%;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .footer-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .product-card {
-        padding: 30px 20px;
+      background: #101e33;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 255, 173, 0.05);
+      transition: transform 0.3s;
     }
 
-    .pipeline-section h2 {
-        font-size: 2rem;
+    .product-card:hover {
+      transform: translateY(-6px);
     }
-} 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #0A0F1C, #0E1624);
-  color: white;
-  overflow-x: hidden;
-}
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 36px;
-  background-color: rgba(10, 15, 28, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(8px);
-}
+    .product-card h3 {
+      color: #00FFAD;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
 
-.logo {
-  font-size: 1.8rem;
-  color: #00FFAD;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
+    .product-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
 
-nav a {
-  margin: 0 16px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+    /* Footer */
+    footer {
+      background-color: #0A0F1C;
+      color: #ccc;
+      padding: 60px 20px 30px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 40px;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 220px;
+    }
+    .footer-logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .footer-logo .accent {
+      color: #00FFAD;
+    }
+    .footer-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #aaa;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: #777;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-nav a:hover {
-  color: #00FFAD;
-}
-
-nav a.active {
-  color: #00FFAD;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 80px 20px 40px;
-  position: relative;
-  min-height: 82vh;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  animation: fadeIn 1.5s ease-in;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: #00FFAD;
-}
-
-.hero p {
-  color: #aaa;
-  margin-top: 10px;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  animation: fadeIn 2s ease-in;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-.buttons button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 50px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-primary {
-  background-color: #00FFAD;
-  color: black;
-}
-
-.btn-primary:hover {
-  background-color: #00e0a0;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: white;
-  color: #0A0F1C;
-}
-
-/* Bubble Effects */
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 0;
-}
-
-.bubble1 {
-  top: 10%;
-  right: 15%;
-  width: 250px;
-  height: 250px;
-  background: rgba(0, 255, 173, 0.25);
-  animation: float 6s ease-in-out infinite;
-}
-
-.bubble2 {
-  bottom: 10%;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 255, 173, 0.15);
-  animation: float 8s ease-in-out infinite;
-}
-
-/* Scroll-down Arrow */
-.scroll-down {
-  margin-top: 40px;
-  font-size: 1.6rem;
-  animation: bounce 2s infinite;
-  color: white;
-}
-
-/* Animations */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
-  
-  .hero {
-    padding: 60px 20px 40px;
-  }
-  
-  .bubble1, .bubble2 {
-    display: none;
-  }
-  
-  .buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero {
-    padding-top: 60px;
-    min-height: 90vh;
-  }
-  
-  .scroll-down {
-    font-size: 1.4rem;
-    margin-top: 20px;
-  }
-}
-</style>
-
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .product-card {
+        padding: 18px;
+      }
+      .footer-container {
+        flex-direction: column;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
 
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const options = { threshold: 0.1 };
+<header>
+  <div class="logo">MEDSYN</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="whychooseus.html">Why Us</a>
+  </nav>
+</header>
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('active');
-    });
-  }, options);
+<section>
+  <h2 class="section-title">Our <span>Products</span></h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>Corneal Therapy</h3>
+      <p>Innovative cross-linking formulations for keratoconus and ectasia management. Tailored to enhance epithelial absorption and minimize healing time.</p>
+    </div>
+    <div class="product-card">
+      <h3>Retinal Care</h3>
+      <p>Proprietary antioxidant and neuroprotective solutions to preserve retinal integrity. Designed to complement AI-detected risk zones.</p>
+    </div>
+    <div class="product-card">
+      <h3>Glaucoma Solutions</h3>
+      <p>Pressure modulation and fluid dynamics targeting compounds to assist with IOP control. Non-invasive and highly bioavailable.</p>
+    </div>
+    <div class="product-card">
+      <h3>Dry Eye Management</h3>
+      <p>Biocompatible tear substitutes with anti-inflammatory and osmoprotective agents. Comfortable for long-term relief and support.</p>
+    </div>
+  </div>
+</section>
 
-  reveals.forEach(section => {
-    observer.observe(section);
-  });
-</script>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <div class="footer-logo">MEDSYN<span class="accent"> Therapeutics</span></div>
+      <p class="footer-desc">Advancing ophthalmology through innovation, research, and collaboration.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Medsyn Therapeutics. All rights reserved.</p>
+  </div>
+</footer>
 
-{% include 'header.html' %}
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Product Highlights</h1>
-            <p>Our innovative product portfolio addresses key challenges in ophthalmology care.</p>
-            <div class="hero-line"></div>
-        </div>
-    </section>
-
-    <!-- Products Grid -->
-    <section class="products-section">
-        <div class="container">
-            <div class="products-grid">
-                <!-- Corneal Care -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Corneal Care</h3>
-                    <p>Advanced solutions for corneal disorders, including regenerative therapies and protective formulations.</p>
-                    <div class="product-status fda-approved">
-                        <span>FDA Approved</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Retina Solutions -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <h3>Retina Solutions</h3>
-                    <p>Targeted therapies for retinal conditions, including AMD, diabetic retinopathy, and retinal detachment.</p>
-                    <div class="product-status phase-trial">
-                        <span>Phase III Trial</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Glaucoma Management -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h3>Glaucoma Management</h3>
-                    <p>Innovative approaches to reduce intraocular pressure and protect optic nerve function.</p>
-                    <div class="product-status fda-approved">
-                        <span>FDA Approved</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Riboflavin Solutions -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Riboflavin Solutions</h3>
-                    <p>Specialized formulations for corneal cross-linking and other photochemical treatments.</p>
-                    <div class="product-status ce-marked">
-                        <span>CE Marked</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Dry Eye Therapy -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3>Dry Eye Therapy</h3>
-                    <p>Comprehensive solutions for dry eye syndrome with long-lasting relief and comfort.</p>
-                    <div class="product-status phase-trial">
-                        <span>Phase II Trial</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Surgical Instruments -->
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Surgical Instruments</h3>
-                    <p>Precision instruments designed for minimally invasive ophthalmic procedures.</p>
-                    <div class="product-status fda-approved">
-                        <span>FDA Approved</span>
-                    </div>
-                    <a href="#" class="product-link">
-                        Learn More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pipeline Section -->
-    <section class="pipeline-section">
-        <div class="container">
-            <h2>Development Pipeline</h2>
-            <p>Our robust pipeline ensures continuous innovation in ophthalmology</p>
-            
-            <div class="pipeline-timeline">
-                <div class="pipeline-item">
-                    <div class="pipeline-phase">Pre-Clinical</div>
-                    <div class="pipeline-count">8 Products</div>
-                    <div class="pipeline-description">Early-stage research and development</div>
-                </div>
-                
-                <div class="pipeline-item">
-                    <div class="pipeline-phase">Phase I</div>
-                    <div class="pipeline-count">3 Products</div>
-                    <div class="pipeline-description">Safety and dosage studies</div>
-                </div>
-                
-                <div class="pipeline-item">
-                    <div class="pipeline-phase">Phase II</div>
-                    <div class="pipeline-count">5 Products</div>
-                    <div class="pipeline-description">Efficacy and side effect evaluation</div>
-                </div>
-                
-                <div class="pipeline-item">
-                    <div class="pipeline-phase">Phase III</div>
-                    <div class="pipeline-count">2 Products</div>
-                    <div class="pipeline-description">Large-scale effectiveness studies</div>
-                </div>
-                
-                <div class="pipeline-item">
-                    <div class="pipeline-phase">Market</div>
-                    <div class="pipeline-count">12 Products</div>
-                    <div class="pipeline-description">FDA approved and available</div>
-                </div>
-            </div>
-        </div>
-    </section>
-{% include 'footer.html' %}
 </body>
 </html>
